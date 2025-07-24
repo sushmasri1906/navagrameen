@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -26,12 +27,17 @@ export default function Navbar() {
 
 	return (
 		<header className="bg-transparent text-black sticky top-0 z-50 backdrop-blur-md backdrop-saturate-150 shadow-lg">
-			<div className="w-full px-4 h-24 flex items-center justify-between">
+			<div className="w-full px-4 md:px-8 h-24 flex items-center justify-between">
 				{/* Logo */}
-				<Link
-					href="/"
-					className="text-lg md:text-2xl font-bold text-orange-500 hover:text-orange-600 transition">
-					NAVA GRAMEEN
+				<Link href="/" className="flex items-center ml-4 md:ml-8">
+					<Image
+						src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1753339889/Nava_Grameena_Logo_tkcjwe.png"
+						alt="Nava Grameena Logo"
+						width={180}
+						height={50}
+						className="h-20 w-auto object-contain"
+						priority
+					/>
 				</Link>
 
 				{/* Hamburger for mobile */}
